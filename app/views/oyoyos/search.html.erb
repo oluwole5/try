@@ -1,0 +1,21 @@
+<html>
+<head> 
+<title>Search</title>
+
+</head>
+<body>
+<h1>Search Resuld</h1>
+
+
+<table>
+<tr><td>Name</td></tr>
+<% @oyoyos.each do |s| %>
+<tr>
+<td><%= s.name%></td>
+<td><%= s.comment%></td>
+</tr>
+<%end%>
+</table>
+</body>
+
+</html>

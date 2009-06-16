@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>Oyoyos: <%= controller.action_name %></title>
+  <%= stylesheet_link_tag 'scaffold' %>
+   <style type="text/css">
+body { font-family: verdana,sans-serif;
+border-style: solid;
+width:800px;color:white;
+border-color: #0000ff;
+padding:20px 0px 20px 100px;background-color:gray;margin:auto;
+}
+
+h6 {color:red;}
+p 
+h2
+h1 { font:15px}
+h4 { color:white;}
+a:link {color:black}
+a:hover {color:white}
+a:visited {color:white}
+</style>
+</head>
+<body >
+
+<%= yield %>
+<p><%=flash[:notice] %></p>
+
+
+
+
+</body>
+</html>

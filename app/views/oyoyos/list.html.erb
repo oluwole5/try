@@ -1,0 +1,30 @@
+<html>
+<head>
+<title>Lists </title>
+
+</head>
+<body>
+<h1>All recipes</h1>
+
+<table>
+<tr>  
+       <td>Recipe</td>
+        <td>comments</td>
+</tr>
+
+<% @oyoyos.each do |oyoyo|%>
+  
+ 
+<tr> 
+<td> <%=oyoyo.name %></td>
+<td> <%=oyoyo.comment %></td>
+</tr>
+<%end%>
+</table>
+
+<%= link_to 'home', oyoyos_path%>
+</body>
+</html>
+
+
+

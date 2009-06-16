@@ -1,0 +1,36 @@
+<h1>Listing oyoyos</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Comment</th>
+    <th>Date</th>
+  </tr>
+<%= @current_time%>
+<% @oyoyos.each do |oyoyo| %>
+  <tr>
+    <td><%=oyoyo.name %></td>
+    <td><%= oyoyo.comment %></td>
+    <td><%= oyoyo.date %></td>
+    <td><%= link_to 'Show', oyoyo %></td>  
+  
+    <td><%= link_to 'Edit', edit_oyoyo_path(oyoyo) %></td>
+    <td><%= link_to 'Destroy', oyoyo, :confirm => 'Are you sure?', :method => :delete %></td>
+   
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<h3>Enter keyword</h3>
+<form action ="oyoyos/search" method="post">
+<input name = "key" type="input" />
+<input value="Send" type="submit"/>
+</form>
+  <%=form_tag :action=>'list' %> 
+<%=submit_tag 'list'%>
+<%= link_to 'New oyoyo', new_oyoyo_path %>
+
+
+
